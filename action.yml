@@ -1,6 +1,6 @@
 name: 'Publish Conda'
 description: 'Build and Publish Conda package to Anaconda'
-author: 'Fatih C Akyon'
+author: 'Riccorl'
 branding:
   icon: 'package'  
   color: 'purple'
