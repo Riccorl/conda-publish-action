@@ -25,14 +25,15 @@ check_if_meta_yaml_file_exists() {
 
 build_package(){
     # Build for Linux
-    conda build -c conda-forge -c riccorl --output-folder . .
+    conda config --set allow_conda_downgrades true
+    conda build -c anaconda -c conda-forge -c riccorl --output-folder . .
 
     # Convert to other platforms: OSX, WIN
     if [[ $INPUT_PLATFORMS == *"osx"* ]]; then
-    conda convert -p osx-64 linux-64/*.tar.bz2
+    conda convert -f -p osx-64 linux-64/*.tar.bz2
     fi
     if [[ $INPUT_PLATFORMS == *"win"* ]]; then
-    conda convert -p win-64 linux-64/*.tar.bz2
+    conda convert -f -p win-64 linux-64/*.tar.bz2
     fi
 }
 
