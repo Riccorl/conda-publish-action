@@ -1,4 +1,4 @@
-name: 'Publish Conda'
+name: 'Publish to Conda'
 description: 'Build and Publish Conda package to Anaconda'
 author: 'Riccorl'
 branding:
